@@ -35,7 +35,6 @@ function twentyseventeen_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
-
 	/*
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
@@ -50,8 +49,9 @@ function twentyseventeen_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( '400', '400' );
 
-	add_image_size( 'twentyseventeen-featured-image', 2000, 1200, true );
+    add_image_size( 'twentyseventeen-featured-image', 2000, 1200, true );
 
 	add_image_size( 'twentyseventeen-thumbnail-avatar', 100, 100, true );
 

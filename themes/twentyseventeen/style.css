@@ -146,7 +146,6 @@ body {
   height: 29px;
 }
 .footer-wrapper{
-  margin-top: 40px;
   bottom:0;
   position: relative;
   font-family: 'Lato', sans-serif;
@@ -203,4 +202,96 @@ body {
           url('/wp-content/themes/twentyseventeen/assets/images/kebab1.jpg');
   background-size: cover;
   font-family: 'Lato', sans-serif;
+}
+.title-gallery{
+  font-size:70px;
+}
+.gallery-page-wrapper{
+  background:
+          linear-gradient(
+                  rgba(0, 0, 0, 0.5),
+                  rgba(0, 0, 0, 0.5)
+          ),
+          url('/wp-content/themes/twentyseventeen/assets/images/image-gal.jpg');
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+  width:100%;
+}
+.gallery-section{
+  margin-top:40px;
+}
+.margin-style{
+  margin-bottom:40px;
+}
+.img-style{
+  width:100%;
+  height:auto;
+  position: relative;
+}
+.img-style:hover{
+  -webkit-filter: brightness(70%);
+  filter: brightness(70%);
+}
+.image-caption{
+  display: none;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-size:20px;
+  color:white;
+}
+.img-style:hover + .image-caption {
+  display: block;
+}
+.contact-page-wrapper{
+  background:
+          linear-gradient(
+                  rgba(0, 0, 0, 0.5),
+                  rgba(0, 0, 0, 0.5)
+          ),
+          url('/wp-content/themes/twentyseventeen/assets/images/contact.jpg');
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+  width:100%;
+}
+.title-contact{
+  font-size:50px;
+  font-family: 'Lato', sans-serif;
+}
+.desc-contact{
+  font-size:25px;
+  font-family: 'Lato', sans-serif;
+}
+.button-style{
+  background: #FBB040;
+  color:darkslategrey;
+}
+.button-style:hover{
+  color:darkslategrey;
+  background: #fb7908;
+}
+.btn-rd {
+  border-radius: 40px !important;
+}
+.call-us{
+  font-size:30px;
+  font-family: 'Lato', sans-serif;
+}
+.visit-direction{
+  font-size:20px;
+  font-family: 'Lato', sans-serif;
+}
+.commute-title{
+  font-size:25px;
+  font-family: 'Lato', sans-serif;
+  margin-top: 10px;
+}
+.direction-wrapper{
+  margin:40px 0 40px 0;
+}
+.dropdown-menu-style{
+  border-radius: 0px !important;
+  margin-top:-20px !important;
 }

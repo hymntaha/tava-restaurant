@@ -50,11 +50,16 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/gallery">gallery</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">catering</a>
+                            <li class="dropdown">
+                                <a class="nav-link delivery-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/delivery">delivery</a>
+                                <div class="dropdown-menu dropdown-menu-style" aria-labelledby="dropdownMenuButton">
+                                    <a class="nav-link" href="#">Uber Eats</a>
+                                    <a class="nav-link" href="#">Seamless</a>
+                                    <a class="nav-link" href="#">Caviar</a>
+                                </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">private events</a>
+                                <a class="nav-link" href="/contact">contact + visit</a>
                             </li>
                         </div>
                     </ul>
