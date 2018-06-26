@@ -27,7 +27,7 @@
 <body <?php body_class(); ?>>
 <header>
     <div class="navbar-wrapper">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light navbar-style">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
@@ -45,7 +45,7 @@
                                 <a class="nav-link" href="/reservation">reservations</a>
                             </li>
                             <div class="navbar-header">
-                                <a class="navbar-brand brand-style" href="/">Tava</a>
+                                <a class="navbar-brand brand-style" href="/"><img class="rounded mx-auto d-block" src="/wp-content/themes/twentyseventeen/assets/images/logo.jpeg"></a>
                             </div>
                             <li class="nav-item">
                                 <a class="nav-link" href="/gallery">gallery</a>

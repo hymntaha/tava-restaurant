@@ -29,9 +29,9 @@
                 <p>Fri - Sat 4:30-12:00 am</p>
             </div>
             <div class="col-md-4">
-                <p>216 E 29th Street</p>
-                <p>NY, New York, 10016</p>
-                <p>111 111 1111</p>
+                <p>318 5th Avenue</p>
+                <p>Brookyln, New York, 11215</p>
+                <p><a href="tel:718-499-5600">718-499-5600</a></p>
             </div>
         </div>
         <div class="row">

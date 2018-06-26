@@ -13,22 +13,11 @@
  */
 
 get_header(); ?>
-<div class="header-overlay">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="fullscreen-video-wrap">
-                <video src="<?php echo content_url(); ?>/uploads/chicken.mp4" autoplay="true"
-                       loop="true"></video>
-            </div>
-        </div>
-    </div>
-</div>
 </header>
 <div class="container-fluid">
     <div class="row">
-        <div class="header-content ">
-            <h1>Tava Restaurant</h1>
-            <p>The best mediterranean for your palate.</p>
+        <div class="header-content">
+            <img class="rounded mx-auto d-block" src="/wp-content/themes/twentyseventeen/assets/images/food-bg.jpeg">
         </div>
     </div>
 </div>
