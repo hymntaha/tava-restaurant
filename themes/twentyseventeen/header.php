@@ -31,12 +31,11 @@
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
-                        <span class="social-icon"><i class="fab fa-instagram"></i></span>
-                        <span class="social-icon"><i class="fab fa-twitter"></i></span>
+                        <a href="https://www.facebook.com/TAVA-Turkish-Mediterranean-188981448422637/" target="_blank"><span class="social-icon"><i class="fab fa-facebook-f"></i></span></a>
+                        <span class="social-icon"><a href="https://www.instagram.com/tavagrill/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></span>
                         <div class="navigation-center">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">menu <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="/menu">menu</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/about">about</a>
@@ -45,18 +44,13 @@
                                 <a class="nav-link" href="/reservation">reservations</a>
                             </li>
                             <div class="navbar-header">
-                                <a class="navbar-brand brand-style" href="/"><img class="rounded mx-auto d-block" src="/wp-content/themes/twentyseventeen/assets/images/logo.jpeg"></a>
+                                <a class="navbar-brand brand-style nav-link active" href="/"><img class="rounded mx-auto d-block" src="/wp-content/themes/twentyseventeen/assets/images/logo.jpeg"></a>
                             </div>
                             <li class="nav-item">
                                 <a class="nav-link" href="/gallery">gallery</a>
                             </li>
-                            <li class="dropdown">
-                                <a class="nav-link delivery-link" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/delivery">delivery</a>
-                                <div class="dropdown-menu dropdown-menu-style" aria-labelledby="dropdownMenuButton">
-                                    <a class="nav-link" href="#">Uber Eats</a>
-                                    <a class="nav-link" href="#">Seamless</a>
-                                    <a class="nav-link" href="#">Caviar</a>
-                                </div>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/yelp">find us on yelp</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/contact">contact + visit</a>

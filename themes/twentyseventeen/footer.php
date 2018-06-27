@@ -25,13 +25,19 @@
             </div>
             <div class="col-md-4">
                 <h3>HOURS</h3>
-                <p>Sun - Thurs 4:30-11:00 pm</p>
-                <p>Fri - Sat 4:30-12:00 am</p>
+                <p>Mon - Fri 11:00 am - 11:00 pm</p>
+                <p>Sat - Sun 10:00 am - 11:00 pm</p>
+                <h3>BRUNCH</h3>
+                <p>Sun 10:00 am - 3:00 pm</p>
+                <h3>LUNCH SPECIAL</h3>
+                <p>Mon - Fri 11:00 am - 3:30 pm</p>
             </div>
             <div class="col-md-4">
                 <p>318 5th Avenue</p>
                 <p>Brookyln, New York, 11215</p>
                 <p><a href="tel:718-499-5600">718-499-5600</a></p>
+                <a href="https://www.facebook.com/TAVA-Turkish-Mediterranean-188981448422637/" target="_blank"><span class="social-icon"><i class="fab fa-facebook-f"></i></span></a>
+                <span class="social-icon"><a href="https://www.instagram.com/tavagrill/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a></span>
             </div>
         </div>
         <div class="row">

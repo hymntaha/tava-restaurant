@@ -254,3 +254,6 @@ body {
 .header-content{
     margin-bottom: 40px;
 }
+a{
+  color: #616161 !important;
+}
