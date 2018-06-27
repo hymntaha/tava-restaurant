@@ -257,3 +257,7 @@ body {
 a{
   color: #616161 !important;
 }
+.menu-title{
+    display:flex;
+    align-items:center;
+}
