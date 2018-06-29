@@ -113,7 +113,7 @@ $args = array(
     'category_name' => 'poached-eggs'
 );
 $poached = new WP_Query( $args ); ?>
-<div class="container-fluid">
+<div class="container-fluid nav-tab-style">
     <div class="row align-items-center">
         <div class="col-12 d-flex justify-content-center">
             <div class="text-center">
@@ -137,22 +137,22 @@ $poached = new WP_Query( $args ); ?>
                         <a class="nav-link" id="seafood-tab" data-toggle="tab" href="#seafood" role="tab" aria-controls="seafood" aria-selected="false">Seafood Entrees</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Vegetarian Entrees</a>
+                        <a class="nav-link" id="vegetarian-tab" data-toggle="tab" href="#vegetarian" role="tab" aria-controls="vegetarian" aria-selected="false">Vegetarian Entrees</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">From The Oven</a>
+                        <a class="nav-link" id="oven-tab" data-toggle="tab" href="#oven" role="tab" aria-controls="oven" aria-selected="false">From The Oven</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Pasta</a>
+                        <a class="nav-link" id="pasta-tab" data-toggle="tab" href="#pasta" role="tab" aria-controls="pasta" aria-selected="false">Pasta</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Wraps</a>
+                        <a class="nav-link" id="wraps-tab" data-toggle="tab" href="#wraps" role="tab" aria-controls="wraps" aria-selected="false">Wraps</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Lunch Specials</a>
+                        <a class="nav-link" id="lunch-tab" data-toggle="tab" href="#lunch" role="tab" aria-controls="lunch" aria-selected="false">Lunch Specials</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Turkish Brunch and Breakfast</a>
+                        <a class="nav-link" id="brunch-tab" data-toggle="tab" href="#brunch" role="tab" aria-controls="brunch" aria-selected="false">Turkish Brunch and Breakfast</a>
                     </li>
                 </ul>
             </div>
@@ -161,15 +161,16 @@ $poached = new WP_Query( $args ); ?>
 </div>
 <div class="container">
     <div class="tab-content" id="myTabContent">
-
         <div class="tab-pane fade show active" id="soup" role="tabpanel" aria-labelledby="soup-tab">
             <div class="row align-items-center">
                 <div class="col-6 mx-auto">
                     <div class="text-center">
-                        <h1 class="display-4">Soups</h1>
+                        <h1 class="display-4 menu-title">Soups</h1>
                         <?php if ($soup->have_posts()) :
                             while ($soup->have_posts()) : $soup->the_post(); ?>
-                                <p class="lead"><?php echo  the_title(); ?></p>
+                                <p class="lead menu-item-style font-weight-bold"><?php echo  the_title(); ?></p>
+                                <p class="lead"><?php echo the_content(); ?></p>
+                                <p><?php echo get_post_meta($post->ID, "food_price", true); ?></p>
                             <?php
                             endwhile;
                         endif;
@@ -178,15 +179,16 @@ $poached = new WP_Query( $args ); ?>
                 </div>
             </div>
         </div>
-
         <div class="tab-pane fade" id="cold" role="tabpanel" aria-labelledby="cold-tab">
             <div class="row align-items-center">
                 <div class="col-6 mx-auto">
                     <div class="text-center">
-                        <h1 class="display-4">Cold Appetizers</h1>
+                        <h1 class="display-4 menu-title">Cold Appetizers</h1>
                         <?php if ($cold->have_posts()) :
                             while ($cold->have_posts()) : $cold->the_post(); ?>
-                                <p class="lead"><?php echo  the_title(); ?></p>
+                                <p class="lead menu-item-style font-weight-bold"><?php echo  the_title(); ?></p>
+                                <p class="lead"><?php echo the_content(); ?></p>
+                                <p><?php echo get_post_meta($post->ID, "food_price", true); ?></p>
                             <?php
                             endwhile;
                         endif;
@@ -195,16 +197,16 @@ $poached = new WP_Query( $args ); ?>
                 </div>
             </div>
         </div>
-
-
         <div class="tab-pane fade" id="salad" role="tabpanel" aria-labelledby="salad-tab">
             <div class="row align-items-center">
                 <div class="col-6 mx-auto">
                     <div class="text-center">
-                        <h1 class="display-4">Salads</h1>
+                        <h1 class="display-4 menu-title">Salads</h1>
                         <?php if ($salad->have_posts()) :
                             while ($salad->have_posts()) : $salad->the_post(); ?>
-                                <p class="lead"><?php echo  the_title(); ?></p>
+                                <p class="lead menu-item-style font-weight-bold"><?php echo  the_title(); ?></p>
+                                <p class="lead"><?php echo the_content(); ?></p>
+                                <p><?php echo get_post_meta($post->ID, "food_price", true); ?></p>
                             <?php
                             endwhile;
                         endif;
@@ -215,10 +217,12 @@ $poached = new WP_Query( $args ); ?>
             <div class="row align-items-center">
                 <div class="col-6 mx-auto">
                     <div class="text-center">
-                        <h1 class="display-4">Sides for Salads</h1>
+                        <h1 class="display-4 menu-title">Sides for Salads</h1>
                         <?php if ($sides_for_salad->have_posts()) :
                             while ($sides_for_salad->have_posts()) : $sides_for_salad->the_post(); ?>
-                                <p class="lead"><?php echo  the_title(); ?></p>
+                                <p class="lead menu-item-style font-weight-bold"><?php echo  the_title(); ?></p>
+                                <p class="lead"><?php echo the_content(); ?></p>
+                                <p><?php echo get_post_meta($post->ID, "food_price", true); ?></p>
                             <?php
                             endwhile;
                         endif;
@@ -227,16 +231,16 @@ $poached = new WP_Query( $args ); ?>
                 </div>
             </div>
         </div>
-
-
         <div class="tab-pane fade" id="main" role="tabpanel" aria-labelledby="main-tab">
             <div class="row align-items-center">
                 <div class="col-6 mx-auto">
                     <div class="text-center">
-                        <h1 class="display-4">Main Courses</h1>
+                        <h1 class="display-4 menu-title">Main Courses</h1>
                         <?php if ($main_courses->have_posts()) :
                             while ($main_courses->have_posts()) : $main_courses->the_post(); ?>
-                                <p class="lead"><?php echo  the_title(); ?></p>
+                                <p class="lead menu-item-style font-weight-bold"><?php echo  the_title(); ?></p>
+                                <p class="lead"><?php echo the_content(); ?></p>
+                                <p><?php echo get_post_meta($post->ID, "food_price", true); ?></p>
                             <?php
                             endwhile;
                         endif;
@@ -247,10 +251,12 @@ $poached = new WP_Query( $args ); ?>
             <div class="row align-items-center">
                 <div class="col-6 mx-auto">
                     <div class="text-center">
-                        <h1 class="display-4">Sides For Main Courses</h1>
+                        <h1 class="display-4 menu-title">Sides For Main Courses</h1>
                         <?php if ($sides_for_main->have_posts()) :
                             while ($sides_for_main->have_posts()) : $sides_for_main->the_post(); ?>
-                                <p class="lead"><?php echo  the_title(); ?></p>
+                                <p class="lead menu-item-style font-weight-bold"><?php echo  the_title(); ?></p>
+                                <p class="lead"><?php echo the_content(); ?></p>
+                                <p><?php echo get_post_meta($post->ID, "food_price", true); ?></p>
                             <?php
                             endwhile;
                         endif;
@@ -259,16 +265,16 @@ $poached = new WP_Query( $args ); ?>
                 </div>
             </div>
         </div>
-
-
         <div class="tab-pane fade" id="yogurt" role="tabpanel" aria-labelledby="yogurt-tab">
             <div class="row align-items-center">
                 <div class="col-6 mx-auto">
                     <div class="text-center">
-                        <h1 class="display-4">Yogurtlu Kebabs</h1>
+                        <h1 class="display-4 menu-title">Yogurtlu Kebabs</h1>
                         <?php if ($yogurt_kebabs->have_posts()) :
                             while ($yogurt_kebabs->have_posts()) : $yogurt_kebabs->the_post(); ?>
-                                <p class="lead"><?php echo  the_title(); ?></p>
+                                <p class="lead menu-item-style font-weight-bold"><?php echo  the_title(); ?></p>
+                                <p class="lead"><?php echo the_content(); ?></p>
+                                <p><?php echo get_post_meta($post->ID, "food_price", true); ?></p>
                             <?php
                             endwhile;
                         endif;
@@ -277,15 +283,16 @@ $poached = new WP_Query( $args ); ?>
                 </div>
             </div>
         </div>
-
         <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="seafood-tab">
             <div class="row align-items-center">
                 <div class="col-6 mx-auto">
                     <div class="text-center">
-                        <h1 class="display-4">Seafood Entrees</h1>
+                        <h1 class="display-4 menu-title">Seafood Entrees</h1>
                         <?php if ($seafood_entrees->have_posts()) :
                             while ($seafood_entrees->have_posts()) : $seafood_entrees->the_post(); ?>
-                                <p class="lead"><?php echo  the_title(); ?></p>
+                                <p class="lead menu-item-style font-weight-bold"><?php echo  the_title(); ?></p>
+                                <p class="lead"><?php echo the_content(); ?></p>
+                                <p><?php echo get_post_meta($post->ID, "food_price", true); ?></p>
                             <?php
                             endwhile;
                         endif;
@@ -294,90 +301,113 @@ $poached = new WP_Query( $args ); ?>
                 </div>
             </div>
         </div>
-
-        <div class="row align-items-center">
-            <div class="col-6 mx-auto">
-                <div class="text-center">
-                    <h1 class="display-4">Vegetarian Entrees</h1>
-                    <?php if ($vegetarian_entrees->have_posts()) :
-                        while ($vegetarian_entrees->have_posts()) : $vegetarian_entrees->the_post(); ?>
-                            <p class="lead"><?php echo  the_title(); ?></p>
-                        <?php
-                        endwhile;
-                    endif;
-                    wp_reset_postdata(); ?>
+        <div class="tab-pane fade" id="vegetarian" role="tabpanel" aria-labelledby="vegetarian-tab">
+            <div class="row align-items-center">
+                <div class="col-6 mx-auto">
+                    <div class="text-center">
+                        <h1 class="display-4 menu-title">Vegetarian Entrees</h1>
+                        <?php if ($vegetarian_entrees->have_posts()) :
+                            while ($vegetarian_entrees->have_posts()) : $vegetarian_entrees->the_post(); ?>
+                                <p class="lead menu-item-style font-weight-bold"><?php echo  the_title(); ?></p>
+                                <p class="lead"><?php echo the_content(); ?></p>
+                                <p><?php echo get_post_meta($post->ID, "food_price", true); ?></p>
+                            <?php
+                            endwhile;
+                        endif;
+                        wp_reset_postdata(); ?>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row align-items-center">
-            <div class="col-6 mx-auto">
-                <div class="text-center">
-                    <h1 class="display-4">From The Oven</h1>
-                    <?php if ($oven->have_posts()) :
-                        while ($oven->have_posts()) : $oven->the_post(); ?>
-                            <p class="lead"><?php echo  the_title(); ?></p>
-                        <?php
-                        endwhile;
-                    endif;
-                    wp_reset_postdata(); ?>
+        <div class="tab-pane fade" id="oven" role="tabpanel" aria-labelledby="oven-tab">
+            <div class="row align-items-center">
+                <div class="col-6 mx-auto">
+                    <div class="text-center">
+                        <h1 class="display-4 menu-title">From The Oven</h1>
+                        <?php if ($oven->have_posts()) :
+                            while ($oven->have_posts()) : $oven->the_post(); ?>
+                                <p class="lead menu-item-style font-weight-bold"><?php echo  the_title(); ?></p>
+                                <p class="lead"><?php echo the_content(); ?></p>
+                                <p><?php echo get_post_meta($post->ID, "food_price", true); ?></p>
+                            <?php
+                            endwhile;
+                        endif;
+                        wp_reset_postdata(); ?>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row align-items-center">
-            <div class="col-6 mx-auto">
-                <div class="text-center">
-                    <h1 class="display-4">Pasta</h1>
-                    <?php if ($pasta->have_posts()) :
-                        while ($pasta->have_posts()) : $pasta->the_post(); ?>
-                            <p class="lead"><?php echo  the_title(); ?></p>
-                        <?php
-                        endwhile;
-                    endif;
-                    wp_reset_postdata(); ?>
+        <div class="tab-pane fade" id="pasta" role="tabpanel" aria-labelledby="pasta-tab">
+            <div class="row align-items-center">
+                <div class="col-6 mx-auto">
+                    <div class="text-center">
+                        <h1 class="display-4 menu-title">Pasta</h1>
+                        <?php if ($pasta->have_posts()) :
+                            while ($pasta->have_posts()) : $pasta->the_post(); ?>
+                                <p class="lead menu-item-style font-weight-bold"><?php echo  the_title(); ?></p>
+                                <p class="lead"><?php echo the_content(); ?></p>
+                                <p><?php echo get_post_meta($post->ID, "food_price", true); ?></p>
+                            <?php
+                            endwhile;
+                        endif;
+                        wp_reset_postdata(); ?>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row align-items-center">
-            <div class="col-6 mx-auto">
-                <div class="text-center">
-                    <h1 class="display-4">Wraps</h1>
-                    <?php if ($wraps->have_posts()) :
-                        while ($wraps->have_posts()) : $wraps->the_post(); ?>
-                            <p class="lead"><?php echo  the_title(); ?></p>
-                        <?php
-                        endwhile;
-                    endif;
-                    wp_reset_postdata(); ?>
+        <div class="tab-pane fade" id="wraps" role="tabpanel" aria-labelledby="wraps-tab">
+            <div class="row align-items-center">
+                <div class="col-6 mx-auto">
+                    <div class="text-center">
+                        <h1 class="display-4 menu-title">Wraps</h1>
+                        <?php if ($wraps->have_posts()) :
+                            while ($wraps->have_posts()) : $wraps->the_post(); ?>
+                                <p class="lead menu-item-style font-weight-bold"><?php echo  the_title(); ?></p>
+                                <p class="lead"><?php echo the_content(); ?></p>
+                                <p><?php echo get_post_meta($post->ID, "food_price", true); ?></p>
+                            <?php
+                            endwhile;
+                        endif;
+                        wp_reset_postdata(); ?>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row align-items-center">
-            <div class="col-6 mx-auto">
-                <div class="text-center">
-                    <h1 class="display-4">Lunch Specials</h1>
+        <div class="tab-pane fade" id="lunch" role="tabpanel" aria-labelledby="lunch-tab">
+            <div class="row align-items-center">
+                <div class="col-6 mx-auto">
+                    <div class="text-center">
+                        <h1 class="display-4 menu-title">Lunch Specials</h1>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row align-items-center">
-            <div class="col-6 mx-auto">
-                <div class="text-center">
-                    <h1 class="display-4">Turkish Breaksfast</h1>
-                    <h1 class="display-4">Omeletes</h1>
-                    <?php if ($omeletes->have_posts()) :
-                        while ($omeletes->have_posts()) : $omeletes->the_post(); ?>
-                            <p class="lead"><?php echo  the_title(); ?></p>
-                        <?php
-                        endwhile;
-                    endif;
-                    wp_reset_postdata(); ?>
-                    <h1 class="display-4">Poached Eggs</h1>
-                    <?php if ($poached->have_posts()) :
-                        while ($poached->have_posts()) : $poached->the_post(); ?>
-                            <p class="lead"><?php echo  the_title(); ?></p>
-                        <?php
-                        endwhile;
-                    endif;
-                    wp_reset_postdata(); ?>
+        <div class="tab-pane fade" id="brunch" role="tabpanel" aria-labelledby="brunch-tab">
+            <div class="row align-items-center">
+                <div class="col-6 mx-auto">
+                    <div class="text-center">
+                        <h1 class="display-4 menu-title">Turkish Breaksfast</h1>
+                        <h1 class="display-4 menu-title">Omeletes</h1>
+                        <?php if ($omeletes->have_posts()) :
+                            while ($omeletes->have_posts()) : $omeletes->the_post(); ?>
+                                <p class="lead menu-item-style font-weight-bold"><?php echo  the_title(); ?></p>
+                                <p class="lead"><?php echo the_content(); ?></p>
+                                <p><?php echo get_post_meta($post->ID, "food_price", true); ?></p>
+                            <?php
+                            endwhile;
+                        endif;
+                        wp_reset_postdata(); ?>
+                        <h1 class="display-4 menu-title">Poached Eggs</h1>
+                        <?php if ($poached->have_posts()) :
+                            while ($poached->have_posts()) : $poached->the_post(); ?>
+                                <p class="lead menu-item-style font-weight-bold"><?php echo  the_title(); ?></p>
+                                <p class="lead"><?php echo the_content(); ?></p>
+                                <p><?php echo get_post_meta($post->ID, "food_price", true); ?></p>
+                            <?php
+                            endwhile;
+                        endif;
+                        wp_reset_postdata(); ?>
+                    </div>
                 </div>
             </div>
         </div>

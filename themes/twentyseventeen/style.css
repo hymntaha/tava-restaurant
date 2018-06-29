@@ -258,6 +258,19 @@ a{
   color: #616161 !important;
 }
 .menu-title{
-    display:flex;
-    align-items:center;
+  background-color: #1c8b78;
+  text-transform: uppercase;
+  border-radius: 0 0 15px 15px;
+  color: white;
+  margin-bottom: 40px;
+}
+.nav-tab-style{
+  margin-top: 40px;
+}
+.nav-tab-style li a{
+  text-transform: uppercase;
+}
+
+.menu-item-style{
+  text-transform: uppercase;
 }
