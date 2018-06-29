@@ -128,10 +128,10 @@ $poached = new WP_Query( $args ); ?>
                         <a class="nav-link" id="salad-tab" data-toggle="tab" href="#salad" role="tab" aria-controls="salad" aria-selected="false">Salads</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Main Courses</a>
+                        <a class="nav-link" id="main-tab" data-toggle="tab" href="#main" role="tab" aria-controls="main" aria-selected="false">Main Courses</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Yogurtlu Kebabs</a>
+                        <a class="nav-link" id="yogurt-tab" data-toggle="tab" href="#yogurt" role="tab" aria-controls="yogurt" aria-selected="false">Yogurtlu Kebabs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Seafood Entrees</a>
@@ -212,9 +212,6 @@ $poached = new WP_Query( $args ); ?>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="tab-pane fade" id="salad" role="tabpanel" aria-labelledby="salad-tab">
             <div class="row align-items-center">
                 <div class="col-6 mx-auto">
                     <div class="text-center">
@@ -232,48 +229,55 @@ $poached = new WP_Query( $args ); ?>
         </div>
 
 
-        <div class="row align-items-center">
-            <div class="col-6 mx-auto">
-                <div class="text-center">
-                    <h1 class="display-4">Main Courses</h1>
-                    <?php if ($main_courses->have_posts()) :
-                        while ($main_courses->have_posts()) : $main_courses->the_post(); ?>
-                            <p class="lead"><?php echo  the_title(); ?></p>
-                        <?php
-                        endwhile;
-                    endif;
-                    wp_reset_postdata(); ?>
+        <div class="tab-pane fade" id="main" role="tabpanel" aria-labelledby="main-tab">
+            <div class="row align-items-center">
+                <div class="col-6 mx-auto">
+                    <div class="text-center">
+                        <h1 class="display-4">Main Courses</h1>
+                        <?php if ($main_courses->have_posts()) :
+                            while ($main_courses->have_posts()) : $main_courses->the_post(); ?>
+                                <p class="lead"><?php echo  the_title(); ?></p>
+                            <?php
+                            endwhile;
+                        endif;
+                        wp_reset_postdata(); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-6 mx-auto">
+                    <div class="text-center">
+                        <h1 class="display-4">Sides For Main Courses</h1>
+                        <?php if ($sides_for_main->have_posts()) :
+                            while ($sides_for_main->have_posts()) : $sides_for_main->the_post(); ?>
+                                <p class="lead"><?php echo  the_title(); ?></p>
+                            <?php
+                            endwhile;
+                        endif;
+                        wp_reset_postdata(); ?>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row align-items-center">
-            <div class="col-6 mx-auto">
-                <div class="text-center">
-                    <h1 class="display-4">Sides For Main Courses</h1>
-                    <?php if ($sides_for_main->have_posts()) :
-                        while ($sides_for_main->have_posts()) : $sides_for_main->the_post(); ?>
-                            <p class="lead"><?php echo  the_title(); ?></p>
-                        <?php
-                        endwhile;
-                    endif;
-                    wp_reset_postdata(); ?>
+
+
+        <div class="tab-pane fade" id="yogurt" role="tabpanel" aria-labelledby="yogurt-tab">
+            <div class="row align-items-center">
+                <div class="col-6 mx-auto">
+                    <div class="text-center">
+                        <h1 class="display-4">Yogurtlu Kebabs</h1>
+                        <?php if ($yogurt_kebabs->have_posts()) :
+                            while ($yogurt_kebabs->have_posts()) : $yogurt_kebabs->the_post(); ?>
+                                <p class="lead"><?php echo  the_title(); ?></p>
+                            <?php
+                            endwhile;
+                        endif;
+                        wp_reset_postdata(); ?>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row align-items-center">
-            <div class="col-6 mx-auto">
-                <div class="text-center">
-                    <h1 class="display-4">Yogurtlu Kebabs</h1>
-                    <?php if ($yogurt_kebabs->have_posts()) :
-                        while ($yogurt_kebabs->have_posts()) : $yogurt_kebabs->the_post(); ?>
-                            <p class="lead"><?php echo  the_title(); ?></p>
-                        <?php
-                        endwhile;
-                    endif;
-                    wp_reset_postdata(); ?>
-                </div>
-            </div>
-        </div>
+
         <div class="row align-items-center">
             <div class="col-6 mx-auto">
                 <div class="text-center">
