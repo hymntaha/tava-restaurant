@@ -134,7 +134,7 @@ $poached = new WP_Query( $args ); ?>
                         <a class="nav-link" id="yogurt-tab" data-toggle="tab" href="#yogurt" role="tab" aria-controls="yogurt" aria-selected="false">Yogurtlu Kebabs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Seafood Entrees</a>
+                        <a class="nav-link" id="seafood-tab" data-toggle="tab" href="#seafood" role="tab" aria-controls="seafood" aria-selected="false">Seafood Entrees</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Vegetarian Entrees</a>
@@ -278,20 +278,23 @@ $poached = new WP_Query( $args ); ?>
             </div>
         </div>
 
-        <div class="row align-items-center">
-            <div class="col-6 mx-auto">
-                <div class="text-center">
-                    <h1 class="display-4">Seafood Entrees</h1>
-                    <?php if ($seafood_entrees->have_posts()) :
-                        while ($seafood_entrees->have_posts()) : $seafood_entrees->the_post(); ?>
-                            <p class="lead"><?php echo  the_title(); ?></p>
-                        <?php
-                        endwhile;
-                    endif;
-                    wp_reset_postdata(); ?>
+        <div class="tab-pane fade" id="seafood" role="tabpanel" aria-labelledby="seafood-tab">
+            <div class="row align-items-center">
+                <div class="col-6 mx-auto">
+                    <div class="text-center">
+                        <h1 class="display-4">Seafood Entrees</h1>
+                        <?php if ($seafood_entrees->have_posts()) :
+                            while ($seafood_entrees->have_posts()) : $seafood_entrees->the_post(); ?>
+                                <p class="lead"><?php echo  the_title(); ?></p>
+                            <?php
+                            endwhile;
+                        endif;
+                        wp_reset_postdata(); ?>
+                    </div>
                 </div>
             </div>
         </div>
+
         <div class="row align-items-center">
             <div class="col-6 mx-auto">
                 <div class="text-center">
