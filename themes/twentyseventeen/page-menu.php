@@ -65,6 +65,19 @@ $args = array(
 );
 $yogurt_kebabs = new WP_Query( $args ); ?>
 
+<?php
+$args = array(
+    'post_type' => 'menu',
+    'category_name' => 'seafood-entrees'
+);
+$seafood_entrees = new WP_Query( $args ); ?>
+
+<?php
+$args = array(
+    'post_type' => 'menu',
+    'category_name' => 'vegetarian-entrees'
+);
+$vegetarian_entrees = new WP_Query( $args ); ?>
 
 <div class="container">
     <div class="row align-items-center">
@@ -157,6 +170,34 @@ $yogurt_kebabs = new WP_Query( $args ); ?>
                 <h1 class="display-4">Yogurtlu Kebabs</h1>
                 <?php if ($yogurt_kebabs->have_posts()) :
                     while ($yogurt_kebabs->have_posts()) : $yogurt_kebabs->the_post(); ?>
+                        <p class="lead"><?php echo  the_title(); ?></p>
+                    <?php
+                    endwhile;
+                endif;
+                wp_reset_postdata(); ?>
+            </div>
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col-6 mx-auto">
+            <div class="text-center">
+                <h1 class="display-4">Seafood Entrees</h1>
+                <?php if ($seafood_entrees->have_posts()) :
+                    while ($seafood_entrees->have_posts()) : $seafood_entrees->the_post(); ?>
+                        <p class="lead"><?php echo  the_title(); ?></p>
+                    <?php
+                    endwhile;
+                endif;
+                wp_reset_postdata(); ?>
+            </div>
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col-6 mx-auto">
+            <div class="text-center">
+                <h1 class="display-4">Vegetarian Entrees</h1>
+                <?php if ($vegetarian_entrees->have_posts()) :
+                    while ($vegetarian_entrees->have_posts()) : $vegetarian_entreess->the_post(); ?>
                         <p class="lead"><?php echo  the_title(); ?></p>
                     <?php
                     endwhile;
