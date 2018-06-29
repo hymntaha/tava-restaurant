@@ -58,6 +58,13 @@ $args = array(
 );
 $sides_for_main = new WP_Query( $args ); ?>
 
+<?php
+$args = array(
+    'post_type' => 'menu',
+    'category_name' => 'yogurtlu-kebabs'
+);
+$yogurt_kebabs = new WP_Query( $args ); ?>
+
 
 <div class="container">
     <div class="row align-items-center">
@@ -148,8 +155,8 @@ $sides_for_main = new WP_Query( $args ); ?>
         <div class="col-6 mx-auto">
             <div class="text-center">
                 <h1 class="display-4">Yogurtlu Kebabs</h1>
-                <?php if ($sides_for_main->have_posts()) :
-                    while ($sides_for_main->have_posts()) : $sides_for_main->the_post(); ?>
+                <?php if ($yogurt_kebabs->have_posts()) :
+                    while ($yogurt_kebabs->have_posts()) : $yogurt_kebabs->the_post(); ?>
                         <p class="lead"><?php echo  the_title(); ?></p>
                     <?php
                     endwhile;
