@@ -30,8 +30,10 @@
         <nav class="navbar navbar-expand-lg navbar-light navbar-style">
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+                    <a class="nav-link social-icon" href="https://www.facebook.com/TAVA-Turkish-Mediterranean-188981448422637/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a class="nav-link social-icon" href="https://www.instagram.com/tavagrill/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
 
+                    <ul class="navbar-nav mr-auto">
                         <div class="navigation-center">
                             <li class="nav-item active">
                                 <a class="nav-link" href="/menu">menu</a>
@@ -54,14 +56,6 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="/contact">contact + visit</a>
                             </li>
-                            <li class="nav-item">
-                                <a href="https://www.instagram.com/tavagrill/?hl=en" target="_blank"><i class="fab fa-instagram"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://www.facebook.com/TAVA-Turkish-Mediterranean-188981448422637/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                            </li>
-
-
                         </div>
                     </ul>
                 </div>
