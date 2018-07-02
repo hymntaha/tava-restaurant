@@ -274,3 +274,6 @@ a{
 .menu-item-style{
   text-transform: uppercase;
 }
+.price-line >.price-style{
+  color:#1c8b78;
+}
