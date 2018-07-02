@@ -38,7 +38,6 @@ require('header.php');
 
                         ?>
                         <img class="img-responsive img-style" src="<?php echo  $image[0];?>">
-                        <p class="image-caption"><?php echo  $image_caption->post_excerpt;?></p>
                     </div>
                 <?php endwhile; ?>
             </div>
