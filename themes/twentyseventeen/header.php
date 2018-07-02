@@ -50,7 +50,7 @@
                                 <a class="nav-link" href="/gallery">gallery</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/yelp">find us on yelp</a>
+                                <a class="nav-link" href="https://www.yelp.com/biz/tava-turkish-and-mediterranean-brooklyn?osq=tava" target="_blank">find us on yelp</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/contact">contact + visit</a>

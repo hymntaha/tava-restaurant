@@ -375,9 +375,36 @@ $poached = new WP_Query( $args ); ?>
         </div>
         <div class="tab-pane fade" id="lunch" role="tabpanel" aria-labelledby="lunch-tab">
             <div class="row align-items-center">
-                <div class="col-6 mx-auto">
+                <div class="col-12 mx-auto">
                     <div class="text-center">
-                        <h1 class="display-4 menu-title">Lunch Specials</h1>
+                        <h1 class="display-4 menu-title">Lunch Specials $12.95</h1>
+                        <h3>MONDAY TO FRIDAY- 11:00 AM TO 3:30PM</h3>
+                        <h3>2 COURSES</h3>
+                        <h5>Coice of Soup or Salad or an Appetizer and an Entree</h5>
+                        <div class="row">
+                            <div class="col-6">
+                                <h3>Soups-Salad-Appetizer</h3>
+                                <p>LENTIL SOUPS</p>
+                                <P>CHICKEN SOUP</P>
+                                <p>SHEPHERD'S SALAD</p>
+                                <P>HUMMUS</P>
+                                <p>TABOULEH</p>
+                                <p>EZME</p>
+                                <p>SPINACH TARATOR</p>
+                                <p>BABAGANUSH</p>
+                            </div>
+                            <div class="col-6">
+                                <h3>Entrees</h3>
+                                <p>CHICKEN GYRO - Monday-Thursday</p>
+                                <p>LAMB GYRO - Only Friday</p>
+                                <p>LAMB ADANA</p>
+                                <p>KOFTE</p>
+                                <p>CHICKEN ADANA</p>
+                                <p>CHICKEN SHISH</p>
+                                <p>FALAFEL</p>
+                                <p>MIXED VEGETABLES CASSEROLE</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
