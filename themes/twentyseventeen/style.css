@@ -277,3 +277,14 @@ a{
 .price-line >.price-style{
   color:#1c8b78;
 }
+html,body {
+  overflow-x: hidden;
+  width: 100%;
+}
+@media(max-width:992px)
+{
+  .navbar-toggler{
+    float:right;
+    margin-top: 30px;
+  }
+}
